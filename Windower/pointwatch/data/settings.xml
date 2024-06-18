@@ -1,0 +1,49 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <strings>
+            <abyssea>string.format(&apos;Abyssea Lights | Amber: [%d] Azure: [%d] Ruby: [%d] Pearl: [%d] Ebon: [%d] Silver: [%d] Gold: [%d] | Time Remaining: %d &apos;,abyssea.amber or 0,abyssea.azure or 0,abyssea.ruby or 0,abyssea.pearlescent or 0,abyssea.ebon or 0,abyssea.silvery or 0,abyssea.golden or 0,abyssea.time_remaining or 0)</abyssea>
+            <default>string.format(&apos;%s%s/%s%s | XP: %s/%s | LP: %s/%s [%s/%s] | CP: %s/%s [%s/%s] | EP: %s/%s [ML: %s/%s] | Sparks: %s/%s | Accolades: %s/%s&apos;, xp.job_abbr, xp.job_level or 0, xp.sub_job_abbr, xp.sub_job_level or 0, xp.current or 0, xp.tnl or 0, lp.current or 0, lp.tnm or 0, lp.number_of_merits or 0, lp.maximum_merits,cp.current or 0, cp.tnjp, cp.number_of_job_points or 0, cp.maximum_job_points, ep.current or 0, ep.tnml or 0, ep.master_level or 0, ep.master_level_max, sparks.current or 0, sparks.maximum,accolades.current or 0, accolades.maximum)</default>
+            <dynamis>string.format(&apos;Dynamis | KI: %s | Time Remaining: %s &apos;,dynamis.KIs,dynamis.time_remaining or 0)</dynamis>
+        </strings>
+        <text_box_settings>
+            <bg>
+                <alpha>100</alpha>
+                <blue>0</blue>
+                <green>0</green>
+                <red>0</red>
+                <visible>false</visible>
+            </bg>
+            <flags>
+                <bold>true</bold>
+                <bottom>false</bottom>
+                <draggable>true</draggable>
+                <italic>false</italic>
+                <right>false</right>
+            </flags>
+            <padding>0</padding>
+            <pos>
+                <x>1</x>
+                <y>-2</y>
+            </pos>
+            <text>
+                <alpha>255</alpha>
+                <blue>255</blue>
+                <font>Consolas</font>
+                <fonts>
+
+                </fonts>
+                <green>255</green>
+                <red>255</red>
+                <size>10</size>
+                <stroke>
+                    <alpha>255</alpha>
+                    <blue>0</blue>
+                    <green>0</green>
+                    <red>0</red>
+                    <width>1</width>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </global>
+</settings>

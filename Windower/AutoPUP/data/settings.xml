@@ -1,0 +1,245 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <activate>false</activate>
+        <active>true</active>
+        <deploy>false</deploy>
+        <ignore_mobs>Commander&apos;s,Leader&apos;s,Regiment&apos;s,Squadron&apos;s</ignore_mobs>
+        <maintenance>false</maintenance>
+        <man>Light Maneuver,Fire Maneuver,Wind Maneuver</man>
+        <remove_pet_debuffs>
+            <AGI_Down>false</AGI_Down>
+            <Accuracy_Down>false</Accuracy_Down>
+            <Attack_Down>false</Attack_Down>
+            <Bio>false</Bio>
+            <Burn>false</Burn>
+            <CHR_Down>false</CHR_Down>
+            <Choke>false</Choke>
+            <DEX_Down>false</DEX_Down>
+            <Defense_Down>false</Defense_Down>
+            <Dia>false</Dia>
+            <Drown>false</Drown>
+            <Elegy>false</Elegy>
+            <Evasion_Down>false</Evasion_Down>
+            <Frost>false</Frost>
+            <Helix>false</Helix>
+            <INT_Down>false</INT_Down>
+            <MND_Down>false</MND_Down>
+            <Magic_Acc._Down>false</Magic_Acc._Down>
+            <Magic_Atk._Down>false</Magic_Atk._Down>
+            <Magic_Def._Down>false</Magic_Def._Down>
+            <Max_HP_Down>false</Max_HP_Down>
+            <Max_MP_Down>false</Max_MP_Down>
+            <Max_TP_Down>false</Max_TP_Down>
+            <Rasp>false</Rasp>
+            <Requiem>false</Requiem>
+            <Shock>false</Shock>
+            <VIT_Down>false</VIT_Down>
+            <bind>false</bind>
+            <petrification>true</petrification>
+            <slow>false</slow>
+            <weight>false</weight>
+        </remove_pet_debuffs>
+        <repair>true</repair>
+        <repairhpp>40</repairhpp>
+        <repairoil>Automat. Oil +3</repairoil>
+        <set>Default</set>
+        <sets>
+            <Default>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Wind Maneuver</3>
+            </Default>
+            <Default_overdrive>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Thunder Maneuver</3>
+            </Default_overdrive>
+            <blm>
+                <1>Light Maneuver</1>
+                <2>Dark Maneuver</2>
+                <3>Ice Maneuver</3>
+            </blm>
+            <blm_overdrive>
+                <1>Light Maneuver</1>
+                <2>Dark Maneuver</2>
+                <3>Ice Maneuver</3>
+            </blm_overdrive>
+            <boneslayer>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Wind Maneuver</3>
+            </boneslayer>
+            <boneslayer_overdrive>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Thunder Maneuver</3>
+            </boneslayer_overdrive>
+            <caitdd>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Dark Maneuver</3>
+            </caitdd>
+            <caitdd_overdrive>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Dark Maneuver</3>
+            </caitdd_overdrive>
+            <caittank>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Light Maneuver</3>
+            </caittank>
+            <caittank_overdrive>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Thunder Maneuver</3>
+            </caittank_overdrive>
+            <dd>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Wind Maneuver</3>
+            </dd>
+            <dd_overdrive>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Thunder Maneuver</3>
+            </dd_overdrive>
+            <ddtank>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Wind Maneuver</3>
+            </ddtank>
+            <ddtank_overdrive>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Thunder Maneuver</3>
+            </ddtank_overdrive>
+            <mdttank>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Water Maneuver</3>
+            </mdttank>
+            <mdttank_overdrive>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Thunder Maneuver</3>
+            </mdttank_overdrive>
+            <od>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Thunder Maneuver</3>
+            </od>
+            <od_overdrive>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Thunder Maneuver</3>
+            </od_overdrive>
+            <ranger>
+                <1>Wind Maneuver</1>
+                <2>Wind Maneuver</2>
+                <3>Wind Maneuver</3>
+            </ranger>
+            <ranger_overdrive>
+                <1>Fire Maneuver</1>
+                <2>Wind Maneuver</2>
+                <3>Fire Maneuver</3>
+            </ranger_overdrive>
+            <rdm>
+                <1>Light Maneuver</1>
+                <2>Dark Maneuver</2>
+                <3>Ice Maneuver</3>
+            </rdm>
+            <rdm_overdrive>
+                <1>Light Maneuver</1>
+                <2>Dark Maneuver</2>
+                <3>Ice Maneuver</3>
+            </rdm_overdrive>
+            <skillup>
+                <1>Water Maneuver</1>
+                <2>Dark Maneuver</2>
+                <3>Ice Maneuver</3>
+            </skillup>
+            <spamdd>
+                <1>Wind Maneuver</1>
+                <2>Wind Maneuver</2>
+                <3>Wind Maneuver</3>
+            </spamdd>
+            <spamdd_overdrive>
+                <1>Fire Maneuver</1>
+                <2>Wind Maneuver</2>
+                <3>Fire Maneuver</3>
+            </spamdd_overdrive>
+            <sstank>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Wind Maneuver</3>
+            </sstank>
+            <sstank_overdrive>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Thunder Maneuver</3>
+            </sstank_overdrive>
+            <turtle>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Water Maneuver</3>
+            </turtle>
+            <turtle_overdrive>
+                <1>Light Maneuver</1>
+                <2>Fire Maneuver</2>
+                <3>Water Maneuver</3>
+            </turtle_overdrive>
+            <whm>
+                <1>Light Maneuver</1>
+                <2>Light Maneuver</2>
+                <3>Dark Maneuver</3>
+            </whm>
+            <whm_overdrive>
+                <1>Light Maneuver</1>
+                <2>Light Maneuver</2>
+                <3>Dark Maneuver</3>
+            </whm_overdrive>
+        </sets>
+        <text>
+            <bg>
+                <alpha>120</alpha>
+                <blue>0</blue>
+                <green>0</green>
+                <red>0</red>
+                <visible>false</visible>
+            </bg>
+            <flags>
+                <bold>true</bold>
+                <bottom>false</bottom>
+                <draggable>true</draggable>
+                <italic>false</italic>
+                <right>false</right>
+            </flags>
+            <padding>0</padding>
+            <pos>
+                <x>620</x>
+                <y>560</y>
+            </pos>
+            <text>
+                <alpha>255</alpha>
+                <blue>255</blue>
+                <font>Consolas</font>
+                <fonts>
+
+                </fonts>
+                <green>255</green>
+                <red>255</red>
+                <size>10</size>
+                <stroke>
+                    <alpha>255</alpha>
+                    <blue>0</blue>
+                    <green>0</green>
+                    <red>0</red>
+                    <width>1</width>
+                </stroke>
+            </text>
+        </text>
+    </global>
+
+</settings>

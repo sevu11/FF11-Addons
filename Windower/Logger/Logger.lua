@@ -1,5 +1,5 @@
 _addon.name = 'Logger'
-_addon.author = 'Aikar, Modified by Melucine'
+_addon.author = 'Aikar, Modified by Sevu'
 _addon.version = '1.0.1.2'
 
 require('chat')

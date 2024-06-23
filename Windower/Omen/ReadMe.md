@@ -1,4 +1,4 @@
-# Omen Addon
+# Omen
 
 `Omen` is a addon for Windower, designed to enhance gameplay by providing real-time information and functionality related to objectives in Omen.
 

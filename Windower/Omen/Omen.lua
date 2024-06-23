@@ -60,6 +60,10 @@ defaults.text = {
 
 settings = config.load(defaults)
 
+----------------------------------------------------------------------------------------------
+-- DO NOT EDIT BELOW THIS LINE
+----------------------------------------------------------------------------------------------
+
 function defineColor(r, g, b)
     return "\\cs("..tostring(r)..","..tostring(g)..","..tostring(b)..")"
 end

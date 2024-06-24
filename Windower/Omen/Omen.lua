@@ -1,4 +1,5 @@
---[[ 
+--[[  
+
 Copyright © 2017-2024, Braden, Sechs, Sevu
 All rights reserved.
  
@@ -25,16 +26,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-----------------------------------------------------------------------------------------------
--- CHANGELOG
--- v1.6 
--- * Added command functionality 
---   Save/Reload/Hide/Show/Help
--- * Cleaned up default values to settings & added values for displaying bg and change font
--- * Clean up code and added some parts into functions for easier readability and maintenance
-----------------------------------------------------------------------------------------------
 --]]
-
 
 _addon.name    = "Omen"
 _addon.author  = "Braden, Sechs, Sevu"
@@ -43,6 +35,7 @@ _addon.commands = {"omen", "om"}
 
 config = require('config')
 texts = require('texts')
+messages = require('messages')
 
 defaults = T{}
 defaults.bg = {alpha = 50, blue = 0, green = 0, red = 0, visible = true}

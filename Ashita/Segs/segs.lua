@@ -1,22 +1,23 @@
-addon.name      = 'Segs';          
-addon.author    = 'sevu';                 
-addon.version   = '1.0';                      
-addon.desc      = 'Tracks Mog Segments in Odyssey. Prints a report afterwards.'
+addon.name      = 'Segs';
+addon.author    = 'Sevu';
+addon.version   = '1.0';
+addon.desc      = 'Tracks Mog Segments in Odyssey. Prints a report afterwards.';
+addon.link      = 'https://github.com/sevu11/FF11-Addons/Ashita';
 
 require('common')
 local imgui = require('imgui')
-local chat = require("chat")
+local chat = require('chat')
 
 local total_segments = 0
 local total_moogle_segments = 0
 local current_zone = nil
-local previous_zone = ''
+local previous_zone = nil
 local was_in_walk_of_echoes = false
 local show_segment_info = true
 
 local style = imgui.GetStyle()
-    style.WindowRounding = 2 
-    style.WindowBorderSize = 0.1 
+    style.WindowRounding = 2
+    style.WindowBorderSize = 0.1
 
 
 ashita.events.register('text_in', 'segment_recorder_callback', function (e)
@@ -38,10 +39,10 @@ ashita.events.register('text_in', 'segment_recorder_callback', function (e)
 end)
 
 local function zone_check()
-    if current_zone == nil then
-        show_segment_info = false
-    else
+    if current_zone current_zone == 'Walk of Echoes [P1]' or current_zone == 'Walk of Echoes [P2]' then
         show_segment_info = true
+    else
+        show_segment_info = false
     end
 end
 
@@ -61,7 +62,7 @@ ashita.events.register('packet_in', 'zonename_packet_in', function(event)
             if current_zone == 'Walk of Echoes [P1]' or current_zone == 'Walk of Echoes [P2]' then
                 was_in_walk_of_echoes = true
                 total_segments = 0
-                total_moogle_segments = 0                
+                total_moogle_segments = 0
 
             elseif current_zone == 'Rabao' and was_in_walk_of_echoes then
 
@@ -85,7 +86,7 @@ ashita.events.register('command', 'command_callback1', function (e)
         return
     end
 
-    e.blocked = true 
+    e.blocked = true
 
     if args[2] == 'total' then
         print(string.format('\31\207[%s] \31\123 Segment Report:', addon.name))
@@ -114,12 +115,12 @@ end)
 
 local function imgui_render()
     if show_segment_info then
-        imgui.SetNextWindowBgAlpha(0.8)        
+        imgui.SetNextWindowBgAlpha(0.8)
         if imgui.Begin('Mog Segments', show_segment_info,
             bit.bor(
-                ImGuiWindowFlags_NoDecoration, 
-                ImGuiWindowFlags_AlwaysAutoResize, 
-                ImGuiWindowFlags_NoFocusOnAppearing, 
+                ImGuiWindowFlags_NoDecoration,
+                ImGuiWindowFlags_AlwaysAutoResize,
+                ImGuiWindowFlags_NoFocusOnAppearing,
                 ImGuiWindowFlags_NoNav
             )) then
 
@@ -128,21 +129,21 @@ local function imgui_render()
             if current_zone ~= nil then
                 imgui.Text("Current Zone: " .. current_zone)
             end
-            
+
             local button_spacing = 5
-            
+
             if imgui.Button('Close') then
                 show_segment_info = false
             end
-            
+
             imgui.SameLine(0, button_spacing)
-            
+
             if imgui.Button('Reset') then
                 total_segments = 0
                 total_moogle_segments = 0
                 print('\31\207[Segments] \31\123 Reset.')
             end
-            
+
             imgui.End()
         end
     end

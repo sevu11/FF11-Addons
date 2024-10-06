@@ -2,7 +2,6 @@
 return {
     patterns = {
         "Denny.*",
-        "ahal.*"
     },
     exact_names = {}
 }

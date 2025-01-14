@@ -12,7 +12,7 @@ Move and put items away addon for Final Fantasy XI.
 
 ### Commands:
 
-`//move slips        Will fetch all storage slips`
-`//move meds         Will fetch all meds and food items`
-`//move putslips     Will put away all storage slips`
-`//move putmeds      Will put away all meds and food items`
+`//move slips        Will fetch all storage slips
+//move meds         Will fetch all meds and food items
+//move putslips     Will put away all storage slips
+//move putmeds      Will put away all meds and food items`

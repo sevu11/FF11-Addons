@@ -17,7 +17,8 @@ This application will launch and copy `bin` files for Playonline Viewer for user
 8. Make a copy of char1.ps1 and name it char2.ps1 (do same step as for char1).
 
 Assuming you've followed the steps correctly, now you can launch the scripts from the `Launch.exe`. Important you save these to the folder in step 1. If you wish to put it on your desktop or a different location, make a shortcut of it.
-[DOWNLOAD](https://github.com/sevu11/FF11-Addons/releases/tag/0.0.1)
+
+Download the [Launcher.exe](https://github.com/sevu11/FF11-Addons/releases/tag/0.0.1) here.
 
 ### Compile from source
 

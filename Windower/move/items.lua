@@ -8,7 +8,7 @@ return {
         ss18 = "Storage Slip 18", --Item Level 119 Relic equipment
         ss20 = "Storage Slip 20", --Item Level 109 Empyrean equipment
         ss21 = "Storage Slip 21", --Item Level 119 Empyrean equipment
-        ss22 = "Storage Slip 22", --scenario reward III equipment 
+        ss22 = "Storage Slip 22", --Scenario reward III equipment 
         ss23 = "Storage Slip 23", --Ambuscade equipment 
         ss24 = "Storage Slip 24", --Item level 119 +2 artifact equipment 
         ss25 = "Storage Slip 25", --Item level 119 +3 artifact equipment 

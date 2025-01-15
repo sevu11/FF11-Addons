@@ -13,8 +13,8 @@ This application will launch and copy `bin` files for Playonline Viewer for user
 5. Repeat step 2 but name the copied file `char2.bin`. If this is the final lot of characters being added, we're done.
 6. Download char1.ps1 and also place it in the above directory. Also download [PolProxy.exe](https://github.com/jaku/POL-Proxy/releases) if you’re using that. Doesn't matter where this is placed.
 7. Edit $shortcutPath = "X:\PathTo\Windower\windower.lnk" by replacing the text between the "" marks with the directory of your windower profile shortcut.
-7b. Edit $proxyPath in the same way but with the directory where you placed `PolProxy.exe`
-8. Make a copy of char1.ps1 and name it char2.ps1 (do same step as for char1).
+8. Edit $proxyPath in the same way but with the directory where you placed `PolProxy.exe`
+9. Make a copy of char1.ps1 and name it char2.ps1 (do same step as for char1).
 
 Assuming you've followed the steps correctly, now you can launch the scripts from the `Launch.exe`. Important you save these to the folder in step 1. If you wish to put it on your desktop or a different location, make a shortcut of it.
 

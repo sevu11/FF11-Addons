@@ -1,6 +1,7 @@
 $userBinName = "char2"
 $shortcutPath = "D:\Windower4\Windower (Vanilla).lnk"
 $proxyPath = "D:\Windower4\PolProxy.exe"
+$silmarilPath = "D:\Windower4\addons\Silmaril\Silmaril.exe"
 
 if (-not $PSScriptRoot) {
     Write-Error "Unable to determine script directory."
@@ -16,7 +17,8 @@ if (Test-Path $siblingScriptPath) {
         "-File", "`"$siblingScriptPath`"",
         "-UserBinName", $userBinName,
         "-ShortcutPath", "`"$shortcutPath`"",
-        "-ProxyPath", "`"$proxyPath`""
+        "-ProxyPath", "`"$proxyPath`"",
+        "-silmarilPath", "`"$silmarilPath`""
     )
 } else {
     Write-Host "Sibling script not found: $siblingScriptPath"

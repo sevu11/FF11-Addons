@@ -2,7 +2,8 @@ param (
     [string]$userBinName,
     [string]$windowerPath,
     [string]$shortcutPath,
-    [string]$proxyPath
+    [string]$proxyPath,
+    [string]$silmarilPath      
 )
 
 if (-not ($windowerPath -or $shortcutPath)) {
@@ -33,6 +34,21 @@ if ($proxyPath) {
         }
         catch {
             Write-Host "$proxyName launch failed"
+        }
+    }
+}
+
+if ($silmarilPath) {
+    $appName = [System.IO.Path]::GetFileNameWithoutExtension($silmarilPath)
+    $appProcess = Get-Process -Name $appName -ErrorAction SilentlyContinue
+    if ($appProcess) {
+        Write-Host "'$appName' is running."
+    } else {
+        try {
+            Start-Process -FilePath $silmarilPath -WindowStyle Hidden -ErrorAction SilentlyContinue
+        }
+        catch {
+            Write-Host "$appName launch failed"
         }
     }
 }

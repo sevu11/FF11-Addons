@@ -1,0 +1,82 @@
+description: Installs the Ashita 4 third-party launcher and performs required Winetricks
+  configurations.
+game_slug: final-fantasy-xi-online
+gogslug: ''
+humblestoreid: ''
+installer_slug: final-fantasy-xi-online-ashita-4
+name: FINAL FANTASY XI Online
+notes: This installer works best with the "Full (EU) or (US) Version with DXVK" version. For
+  information about configuring Ashita 4, see https://docs.ashitaxi.com/
+runner: wine
+script:
+  custom-name: Ashita 4
+  files:
+  - ashita: https://github.com/AshitaXI/Ashita-v4beta/archive/refs/heads/main.zip
+  - winefix: https://github.com/sevu11/FF11-Addons/releases/download/wine/winefix.zip
+  - ashita-config: https://github.com/sevu11/FF11-Addons/releases/download/ashita/ashita-config.zip
+  game:
+    exe: $ASHITA/ashita-cli.exe
+    args: example.ini
+    launch_configs:
+    - exe: $GAMEDIR/$SE_DIR/PlayOnlineViewer/polcfg/polcfg.exe
+      name: PlayOnline Configuration
+    - exe: $GAMEDIR/$SE_DIR/FINAL FANTASY XI/ToolsEU/FINAL FANTASY XI Config.exe
+      name: FINAL FANTASY XI Online Configuration
+    prefix: $GAMEDIR
+  installer:
+  - task: 
+      app: vcrun2022
+      description: 'Winetricks: Installing Visual C++ Redistributable 2022'
+      name: winetricks
+  - task:
+      app: dotnet48
+      description: 'Winetricks: Installing dotnet48'
+      name: winetricks
+  - task:
+      app: gdiplus
+      description: 'Winetricks: Installing gdiplus'
+      name: winetricks
+  - task:
+      app: "directplay directshow"
+      description: 'Winetricks: Installing and activating directplay & directshow'
+      name: winetricks
+  - task:
+      app: "consolas arial tahoma times verdana corefonts"
+      description: 'Winetricks: Installing Fonts'
+      name: winetricks
+  - extract:
+      description: Extracting Ashita 4
+      dst: $CACHE/Ashita4
+      file: ashita
+  - extract:
+      description: Extracting Ashita 4 configuration 
+      dst: $CACHE/Ashita4-config
+      file: ashita-config
+  - extract:
+      description: Extracting Winefix for Ashita 4
+      dst: $CACHE/Winefix
+      file: winefix
+  - copy:
+      description: Installing Ashita 4
+      dst: $ASHITA
+      src: $CACHE/Ashita4
+  - copy:
+      description: Installing winefix plugin 
+      dst: $ASHITA/plugins
+      src: $CACHE/Winefix
+  - copy:
+      description: Installing ashita configuration  
+      dst: $ASHITA/scripts
+      src: $CACHE/Ashita4-config
+  - copy:
+      description: Updating DXVK DLL location for Ashita 4
+      dst: $GAMEDIR/$SE_DIR/PlayOnlineViewer
+      src: $GAMEDIR/$SE_DIR/FINAL FANTASY XI/d3d8.dll
+  requires: final-fantasy-xi-online
+  variables:
+    SE_DIR: drive_c/Program Files (x86)/PlayOnline/SquareEnix
+    ASHITA: drive_c/Ashita4
+slug: final-fantasy-xi-online-ashita-4
+steamid: 23360
+version: Ashita 4
+year: 2003

@@ -1,0 +1,76 @@
+description: Full install of the EU region version of PlayOnline and Final Fantasy
+  XI with all expansions. Also configures D8VK for better performance
+game_slug: final-fantasy-xi-online
+gogslug: ''
+humblestoreid: ''
+installer_slug: final-fantasy-xi-online-full-eu-version-with
+name: FINAL FANTASY XI Online
+notes: The graphics settings for the game are configured with a separate utility found
+  at "C:\Program Files (x86)\PlayOnline\SquareEnix\FINAL FANTASY XI\ToolsEU\FINAL
+  FANTASY XI Config.exe" which can be reached via the "FINAL FANTASY XI Online Configuration"
+  launch config.
+runner: wine
+script:
+  files:
+  - installer_part1: https://gdl.square-enix.com/ffxi/download/eu/FFXIFullSetup_EU.part1.exe
+  - installer_part2: https://gdl.square-enix.com/ffxi/download/eu/FFXIFullSetup_EU.part2.rar
+  - installer_part3: https://gdl.square-enix.com/ffxi/download/eu/FFXIFullSetup_EU.part3.rar
+  - installer_part4: https://gdl.square-enix.com/ffxi/download/eu/FFXIFullSetup_EU.part4.rar
+  - installer_part5: https://gdl.square-enix.com/ffxi/download/eu/FFXIFullSetup_EU.part5.rar
+  - d8vk: https://github.com/doitsujin/dxvk/releases/download/v2.5.3/dxvk-2.5.3.tar.gz
+  game:
+    exe: drive_c/Program Files (x86)/PlayOnline/SquareEnix/FINAL FANTASY XI/polboot.exe
+    launch_configs:
+    - exe: $GAMEDIR/drive_c/Program Files (x86)/PlayOnline/SquareEnix/PlayOnlineViewer/polcfg/polcfg.exe
+      name: PlayOnline Configuration
+    - exe: $GAMEDIR/drive_c/Program Files (x86)/PlayOnline/SquareEnix/FINAL FANTASY
+        XI/ToolsEU/FINAL FANTASY XI Config.exe
+      name: FINAL FANTASY XI Online Configuration
+    prefix: $GAMEDIR
+  installer:
+  - task:
+      install_mono: true
+      name: create_prefix
+  - execute:
+      args: -s -t "$CACHE" "$installer_part1" "$installer_part2" "$installer_part3"
+        "$installer_part4" "$installer_part5"
+      description: Preparing installer archive
+      file: ln
+  - task:
+      args: -s
+      description: Extracting installer archive
+      executable: $CACHE/FFXIFullSetup_EU.part1.exe
+      name: wineexec
+  - task:
+      args: -q -i "$CACHE/FFXIFullSetup_EU/PlayOnline/PlayOnlineViewer.msi"
+      description: Installing PlayOnline
+      executable: msiexec
+      name: wineexec
+  - task:
+      args: -q -i "$CACHE/FFXIFullSetup_EU/FINAL_FANTASY_XI/FINAL_FANTASY_XI.msi"
+      description: Installing Final Fantasy XI
+      executable: msiexec
+      name: wineexec
+  - extract:
+      description: Extracting dxvk
+      dst: $CACHE/d8vk
+      file: d8vk
+  - copy:
+      description: Installing dxvk
+      dst: $GAMEDIR/drive_c/Program Files (x86)/PlayOnline/SquareEnix/FINAL FANTASY
+        XI/
+      src: $CACHE/d8vk/x32
+  system:
+    env:
+      DXVK_HUD: fps
+  wine:
+    dxvk: false
+    esync: false
+    overrides:
+      d3d8: n,b
+    vkd3d: false
+    architecture: win64
+slug: final-fantasy-xi-online-full-eu-version-with
+steamid: 23360
+version: Full (EU) Version with DXVK
+year: 2003

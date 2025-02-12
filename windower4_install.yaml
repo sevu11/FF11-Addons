@@ -1,0 +1,59 @@
+description: Installs the Windower 4 third-party launcher and performs required Winetricks
+  configurations.
+game_slug: final-fantasy-xi-online
+gogslug: ''
+humblestoreid: ''
+installer_slug: final-fantasy-xi-online-windower-4-live
+name: FINAL FANTASY XI Online
+notes: This installer works best with the "Full (EU) Version with DXVK" version. For
+  information about configuring Windower 4, see https://www.windower.net
+runner: wine
+script:
+  custom-name: Windower 4
+  files:
+  - windower: https://update.windower.net/live/Windower.exe
+  game:
+    exe: $WINDOWER/Windower.exe
+    launch_configs:
+    - exe: $GAMEDIR/$SE_DIR/PlayOnlineViewer/polcfg/polcfg.exe
+      name: PlayOnline Configuration
+    - exe: $GAMEDIR/$SE_DIR/FINAL FANTASY XI/ToolsEU/FINAL FANTASY XI Config.exe
+      name: FINAL FANTASY XI Online Configuration
+    prefix: $GAMEDIR
+  installer:
+  - task: 
+      app: vcrun2022
+      description: 'Winetricks: Installing Visual C++ Redistributable 2022'
+      name: winetricks
+  - task:
+      app: dotnet48
+      description: 'Winetricks: Installing dotnet48'
+      name: winetricks
+  - task:
+      app: gdiplus
+      description: 'Winetricks: Installing gdiplus'
+      name: winetricks
+  - task:
+      app: consolas
+      description: 'Winetricks: Installing Consolas'
+      name: winetricks
+  - task:
+      app: corefonts
+      description: 'Winetricks: Installing Corefonts'
+      name: winetricks
+  - copy:
+      description: Installing Windower 4
+      dst: $WINDOWER
+      src: windower
+  - copy:
+      description: Updating DXVK DLL location for Windower
+      dst: $GAMEDIR/$SE_DIR/PlayOnlineViewer
+      src: $GAMEDIR/$SE_DIR/FINAL FANTASY XI/d3d8.dll
+  requires: final-fantasy-xi-online
+  variables:
+    SE_DIR: drive_c/Program Files (x86)/PlayOnline/SquareEnix
+    WINDOWER: drive_c/Windower4
+slug: final-fantasy-xi-online-windower-4-live
+steamid: 23360
+version: Windower 4 Live
+year: 2003

@@ -6,6 +6,8 @@ My own addons or modified. Includes both Windower and Ashita v4
 Custom powershell script (needs to run as admin)  which will download the FF11 installation files automatically and extract them. 
 Same process as you'd download each file individually. Uses Aria2 for backend. 
 
+*Tested on Windows 11, likely will work on Windows 10 as well.*
+
 ## Custom Lutris Scripts
 
 See: https://github.com/sevu11/FF11-Addons/tree/sevu11-lutris-installers
